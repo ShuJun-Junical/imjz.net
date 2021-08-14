@@ -4,5 +4,5 @@ module.exports = {
     themeConfig: {
         // Please keep looking down to see the available options.
     },
-    dest: './docs'
+    dest: './dist'
 }
