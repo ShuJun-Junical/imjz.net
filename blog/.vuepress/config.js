@@ -2,7 +2,29 @@ module.exports = {
     title: '青章浚的小站', // Title for the site. This will be displayed in the navbar.
     theme: '@vuepress/theme-blog',
     themeConfig: {
-        // Please keep looking down to see the available options.
+        dateFormat: 'YYYY-MM-DD',
+        smoothScroll: true,
+        footer: {
+            contact: [
+                {
+                    type: 'github',
+                    link: 'https://github.com/JupiterJun',
+                },
+                {
+                    type: 'mail',
+                    link: 'mailto:me@imjz.net',
+                },
+            ],
+            copyright: [
+                {
+                    text: '本站文章采用 CC-BY-NC-SA 4.0 国际许可协议进行许可。',
+                    link: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'
+                },
+                {
+                    text: '版权所有 © 2021 青章浚'
+                }
+            ],
+        },
     },
     dest: './dist'
 }
