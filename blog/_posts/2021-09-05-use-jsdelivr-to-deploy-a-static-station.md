@@ -2,7 +2,7 @@
 title: 使用 Jsdelivr 部署国内访问速度友好的静态站
 date: 2021-09-05
 author: 青章浚
-location: 衡水
+location: 保定
 ---
 
 *本文迁移自我的博客园，原始发布日期 2021 年 4 月 2 日*
