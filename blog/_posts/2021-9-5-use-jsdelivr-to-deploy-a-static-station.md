@@ -1,6 +1,6 @@
 ---
 title: 使用 Jsdelivr 部署国内访问速度友好的静态站
-date: 2021-08-14
+date: 2021-04-02
 author: 青章浚
 location: 衡水
 ---
