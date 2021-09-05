@@ -50,4 +50,70 @@ location: 衡水
 
 ## 0x01 具体实现
 
-云函数代码：[Github Gist - 云函数：通过JSDelivr代理访问静态站](https://gist.github.com/JupiterJun/25b85d357e40b15bbdd9d04dd9d57524)
+### 云函数代码
+
+[Github Gist - 云函数：通过JSDelivr代理访问静态站](https://gist.github.com/JupiterJun/25b85d357e40b15bbdd9d04dd9d57524)
+
+注意事项：
+
+- 修改第4行baseUrl为自己网站的JSDelivr的根目录
+- 需要腾讯云函数，其他云函数提供商移植可适当修改代码
+- 需要Axios依赖包（v0.21.1 可用）
+
+index.js
+
+```javascript
+const axios = require("axios");
+
+exports.main_handler = async (event, context, callback) => {
+  const baseUrl = "https://cdn.jsdelivr.net/gh/YOUR_USERNAME/YOUR_REPO_NAME@main/YOUR_DIST_PATH";
+  let path = event.path;
+  if (path.indexOf('.') != -1) {
+    return {
+      isBase64Encoded: false,
+      statusCode: 301,
+      headers: { 'Location': baseUrl + path },
+    }
+  }
+  else {
+    try {
+      let resopnse = await axios.get(baseUrl + '/index.html');
+      return {
+        isBase64Encoded: false,
+        statusCode: 200,
+        headers: { 'Content-Type': 'text/html' },
+        body: resopnse.data
+      }
+    }
+    catch (error) {
+      return {
+        isBase64Encoded: false,
+        statusCode: 200,
+        headers: { 'Content-Type': 'text/html' },
+        body: error
+      }
+    }
+  }
+}
+```
+
+package.json
+
+```json
+{
+  "name": "static-site-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JupiterJun",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
+
+```
+
