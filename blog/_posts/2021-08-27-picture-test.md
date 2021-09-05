@@ -11,4 +11,4 @@ location: 保定
 
 ## 图片测试
 
-![](../imgs/2-5.jpg)
+![测试图：不问天壁纸](../imgs/2021-08-27-picture-test/2-5.jpg)
