@@ -25,6 +25,32 @@ module.exports = {
                 }
             ],
         },
+        frontmatters: [
+            {
+                id: 'tag',
+                keys: ['tag'],
+                path: '/tag/',
+                title: '标签',
+            }
+        ],
+        directories: [
+            {
+                id: 'post',
+                dirname: '_post',
+                path: '/',
+                title: '随笔',
+            }
+        ],
+        nav: [
+            {
+                text: '随笔',
+                link: '/',
+            },
+            {
+                text: '标签',
+                link: '/tag/',
+            },
+        ]
     },
     dest: './dist'
 }

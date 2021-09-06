@@ -30,7 +30,7 @@ jobs:
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
 
       - name: Upload
-        run: coscmd upload -rf --delete -f dist/ /
+        run: coscmd upload -rs --delete -f dist/ /
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
