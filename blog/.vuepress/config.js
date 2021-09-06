@@ -4,6 +4,12 @@ module.exports = {
     themeConfig: {
         dateFormat: 'YYYY-MM-DD',
         smoothScroll: true,
+        sitemap:{
+            hostname: 'https://imjz.net'
+        },
+        feed:{
+            canonical_base:'https://imjz.net'
+        },
         footer: {
             contact: [
                 {
