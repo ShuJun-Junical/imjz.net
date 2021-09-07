@@ -25,7 +25,7 @@ jobs:
         env:
           SECRET_ID: ${{ secrets.SecretId }}
           SECRET_KEY: ${{ secrets.SecretKey }}
-          BUCKET: blog-1301539318
+          BUCKET: life-blog-1301539318
           REGION: ap-hongkong
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
 
