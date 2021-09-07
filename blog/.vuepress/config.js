@@ -1,5 +1,5 @@
 module.exports = {
-    title: '青章浚的小站', // Title for the site. This will be displayed in the navbar.
+    title: '青章浚的生活随笔', // Title for the site. This will be displayed in the navbar.
     theme: '@vuepress/theme-blog',
     themeConfig: {
         dateFormat: 'YYYY-MM-DD',

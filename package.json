@@ -1,11 +1,11 @@
 {
-  "name": "jupiterjun.github.io",
+  "name": "jupiterjun-life-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/JupiterJun/JupiterJun.github.io.git",
+  "repository": "https://github.com/JupiterJun/life-blog.git",
   "author": "JupiterJun <hbbdmjz@163.com>",
   "license": "MIT",
-  "homepage": "https://JupiterJun.github.io/",
+  "homepage": "https://imjz.net/",
   "scripts": {
     "dev": "vuepress dev blog",
     "build": "vuepress build blog"
