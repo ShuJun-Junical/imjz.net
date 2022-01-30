@@ -49,7 +49,8 @@ module.exports = {
             {
                 id:'private',
                 dirname:'private',
-                path:'private',
+                path:'/private',
+                // itemPermalink: '/private/:regular',
                 title:'个人'
             }
         ],
