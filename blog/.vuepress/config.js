@@ -1,5 +1,5 @@
 module.exports = {
-    title: '青章浚的生活随笔', // Title for the site. This will be displayed in the navbar.
+    title: '马浚哲的生活随笔', // Title for the site. This will be displayed in the navbar.
     theme: '@vuepress/theme-blog',
     themeConfig: {
         dateFormat: 'YYYY-MM-DD',
@@ -27,7 +27,7 @@ module.exports = {
                     link: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'
                 },
                 {
-                    text: '版权所有 © 2021 青章浚'
+                    text: '版权所有 © 2022 马浚哲'
                 }
             ],
         },
@@ -45,6 +45,13 @@ module.exports = {
                 dirname: '_post',
                 path: '/',
                 title: '随笔',
+            },
+            {
+                id:'private',
+                dirname:'private',
+                path:'/private',
+                itemPermalink: '/private/:slug',
+                title:'个人'
             }
         ],
         nav: [
