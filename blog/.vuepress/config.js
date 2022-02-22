@@ -27,8 +27,7 @@ module.exports = {
                     link: 'https://beian.miit.gov.cn/'
                 },
                 {
-                    text: '本站文章采用 CC-BY-NC-SA 4.0 国际许可协议进行许可。',
-                    link: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'
+                    text: '本站文章不允许转载。',
                 },
                 {
                     text: '版权所有 © 2022 马浚哲'
