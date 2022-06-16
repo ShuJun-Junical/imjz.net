@@ -14,7 +14,7 @@ module.exports = {
             contact: [
                 {
                     type: 'github',
-                    link: 'https://github.com/JupiterJun',
+                    link: 'https://github.com/ShuJun-Junical',
                 },
                 {
                     type: 'mail',
