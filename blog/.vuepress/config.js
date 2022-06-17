@@ -1,5 +1,5 @@
 module.exports = {
-    title: '马浚哲的生活随笔', // Title for the site. This will be displayed in the navbar.
+    title: '纾浚的生活随笔', // Title for the site. This will be displayed in the navbar.
     theme: '@vuepress/theme-blog',
     themeConfig: {
         dateFormat: 'YYYY-MM-DD',
@@ -30,7 +30,7 @@ module.exports = {
                     text: '本站文章不允许转载。',
                 },
                 {
-                    text: '版权所有 © 2022 马浚哲'
+                    text: '版权所有 © 2022 纾浚_Junical'
                 },
             ],
         },
