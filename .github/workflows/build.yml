@@ -19,9 +19,9 @@ jobs:
           yarn build
           
       - name: Install qshell
-        run: 
-          - wget https://devtools.qiniu.com/qshell-v2.6.3-linux-amd64.tar.gz
-          - tar -xzf qshell-v2.6.3-linux-amd64.tar.gz
+        run: |
+          wget https://devtools.qiniu.com/qshell-v2.6.3-linux-amd64.tar.gz
+          tar -xzf qshell-v2.6.3-linux-amd64.tar.gz
           
       - name: Configure qshell
         env:
@@ -30,10 +30,10 @@ jobs:
         run: ./qshell account $SECRET_ID $SECRET_KEY jjun
 
       - name: Upload
-        run: 
-          - ./qshell listbucket site-imjz -o list.txt
-          - ./qshell batchdelete --force site-imjz -i list.txt
-          - ./qshell qupload2 --bucket site-imjz --overwrite --src-dir dist
+        run: |
+          ./qshell listbucket site-imjz -o list.txt
+          ./qshell batchdelete --force site-imjz -i list.txt
+          ./qshell qupload2 --bucket site-imjz --overwrite --src-dir dist
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
