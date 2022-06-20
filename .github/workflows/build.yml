@@ -18,22 +18,19 @@ jobs:
           yarn
           yarn build
           
-      - name: Install qshell
-        run: 
-          - wget https://devtools.qiniu.com/qshell-v2.6.3-linux-amd64.tar.gz
-          - tar -xzf qshell-v2.6.3-linux-amd64.tar.gz
+      - name: Install coscmd
+        run: sudo pip install coscmd
           
-      - name: Configure qshell
+      - name: Configure coscmd
         env:
-          SECRET_ID: ${{ secrets.QiNiu_AK }}
-          SECRET_KEY: ${{ secrets.QiNiu_SK }}
-        run: ./qshell account $SECRET_ID $SECRET_KEY jjun
+          SECRET_ID: ${{ secrets.SecretId }}
+          SECRET_KEY: ${{ secrets.SecretKey }}
+          BUCKET: life-blog-1301539318
+          REGION: ap-beijing
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
 
       - name: Upload
-        run: 
-          - ./qshell listbucket site-imjz -o list.txt
-          - ./qshell batchdelete --force site-imjz -i list.txt
-          - ./qshell qupload2 --bucket site-imjz --overwrite --src-dir dist
+        run: coscmd upload -rs --delete -f dist/ /
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
