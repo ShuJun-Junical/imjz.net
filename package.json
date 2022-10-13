@@ -1,17 +1,31 @@
 {
-  "name": "jupiterjun-life-blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/JupiterJun/life-blog.git",
-  "author": "JupiterJun <hbbdmjz@163.com>",
-  "license": "MIT",
-  "homepage": "https://imjz.net/",
-  "scripts": {
-    "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
-  },
-  "devDependencies": {
-    "@vuepress/theme-blog": "^2.3.3",
-    "vuepress": "^1.8.2"
-  }
+    "name": "xining.me",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vitepress dev --host 0.0.0.0",
+        "build": "vitepress build",
+        "serve": "vitepress serve"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^18.7.16",
+        "@typescript-eslint/eslint-plugin": "^5.18.0",
+        "@typescript-eslint/parser": "^5.18.0",
+        "@typescript-eslint/types": "^5.18.0",
+        "@vue/compiler-sfc": "^3.2.33",
+        "eslint": "8.11.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^9.4.0",
+        "fs-extra": "^10.1.0",
+        "globby": "^11.1.0",
+        "gray-matter": "^4.0.3",
+        "prettier": "^2.6.2",
+        "typescript": "^4.6.3",
+        "vitepress": "^1.0.0-alpha.15"
+    }
 }

@@ -1,4 +1,4 @@
-name: Build VuePress Static Pages
+name: Build VitePress Static Pages
 on:
     workflow_dispatch:
     push:
