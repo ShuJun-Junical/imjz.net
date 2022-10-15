@@ -1,9 +1,7 @@
 <template>
     <div class="site-footer">
-        MIT Licensed | Copyright © 2021-2022 <a class="vitepress" :href="website">{{ webTitle }}</a
-        ><br />
-        Powered by
-        <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress - 1.0.0-alpha.15</a>
+        本站文章不允许转载 | 版权所有 © 2022 纾浚 Junical<br />
+        <a href="" target="_blank">琼ICP备2022001156号-1</a>
     </div>
 </template>
 <script lang="ts" setup>
