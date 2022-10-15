@@ -12,21 +12,14 @@ async function config() {
         cleanUrls: 'without-subfolders',
         ignoreDeadLinks:true,
         themeConfig: {
+            lastUpdatedText:'上次更新',
             posts: await getPosts(),
             pageSize: pageSize,
-            website: 'https://github.com/airene/vitepress-blog-pure', //copyright link
-            // 评论的仓库地址
-            comment: {
-                repo: 'airene/vitepress-blog-pure',
-                themes: 'github-light',
-                issueTerm: 'pathname'
-            },
             nav: [
-                { text: 'Home', link: '/' },
-                { text: 'Archives', link: '/pages/archives' },
-                { text: 'Tags', link: '/pages/tags' },
-                { text: 'About', link: '/pages/about' }
-                // { text: 'Airene', link: 'http://airene.net' }  -- External link test
+                { text: '首页', link: '/' },
+                { text: '归档', link: '/pages/archives' },
+                { text: '标签', link: '/pages/tags' },
+                { text: '关于我', link: '/pages/about' }
             ],
             //outline:[2,3],
             outlineTitle:'文章摘要',
