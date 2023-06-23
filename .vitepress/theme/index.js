@@ -16,6 +16,6 @@ export default {
         app.component('Tags', Tags)
         app.component('Archives', Archives)
         app.component('Page', Page)
-        app.component('Comment', Comment)
+        // app.component('Comment', Comment)
     }
 }

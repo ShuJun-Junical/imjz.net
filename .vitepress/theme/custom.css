@@ -1,14 +1,17 @@
-:root {
-    --vp-c-green: #2563eb;
-    --vp-c-green-light: #1b76ff;
-    --vp-c-green-lighter: #2563eb;
-    --vp-c-green-dark: #005be3;
-    --vp-c-green-darker: #0045ac;
-    --vp-c-green-dimm-1: rgba(39, 112, 222, 0.5);
-    --vp-c-green-dimm-2: rgba(39, 112, 222, 0.25);
-    --vp-c-green-dimm-3: rgba(39, 112, 222, 0.05);
+@import "https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,600,700.css";
+/* @import "https://fonts.googleapis.com/css?family=Noto+Serif+TC:700.css"; */
 
-    --vp-font-family-base: 'PingFang SC', 'Microsoft Yahei', sans-serif;
+:root {
+    --vp-c-brand: #afa376;
+    --vp-c-brand-light: #dacc93;
+    --vp-c-brand-lighter: #e4d59a;
+    --vp-c-brand-dark: #696245;
+    --vp-c-brand-darker: #584c1c;
+    
+    --vp-font-family-base: sans-serif, 'Inter var experimental', 'Inter var', ui-sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     /*--vp-code-bg-color: #52525b;*/
 
@@ -17,7 +20,9 @@
     --date-color: var(--vp-c-text-2);
     --date-font-family: Georgia, sans-serif;
 }
-
+.vp-doc>*>p{
+    text-indent: 2em;
+}
 /* theme reset start */
 /* for copyright */
 .Layout {
