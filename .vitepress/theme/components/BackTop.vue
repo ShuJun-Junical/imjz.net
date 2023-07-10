@@ -28,17 +28,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
 const btnFlag = ref(false);
 const scrollTop = ref(0);
 
 onMounted(() => {
-  window.addEventListener('scroll', scrollToTop);
+  window.addEventListener("scroll", scrollToTop);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', scrollToTop);
+  window.removeEventListener("scroll", scrollToTop);
 });
 
 function backTop() {
@@ -47,7 +47,7 @@ function backTop() {
 
 function scrollToTop() {
   scrollTop.value =
-    window.pageYOffset ||
+    window.scrollY ||
     document.documentElement.scrollTop ||
     document.body.scrollTop;
   if (scrollTop.value > 400) {

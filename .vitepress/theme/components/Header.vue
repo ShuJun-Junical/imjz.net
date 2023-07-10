@@ -1,18 +1,18 @@
 <template>
   <header
-    :class="`navbar shadow-xl md:bg-opacity-90 fixed transition duration-300 ease-in-out md:px-6 ${
+    :class="`navbar shadow-lg md:bg-opacity-90 fixed transition duration-300 ease-in-out md:px-6 ${
       top ? '' : 'bg-white backdrop-blur-sm shadow-lg'
     }`"
     style="height: 4.8rem"
   >
     <div class="flex-1 px-2 lg:flex-none">
-      <a class="text-3xl" href="/" style="letter-spacing: 0.16em">{{
+      <a class="text-3xl font-bold" href="/" style="letter-spacing: 0.14em">{{
         site.title
       }}</a>
     </div>
     <div class="flex justify-end flex-1 px-2 item">
       <a
-        :class="`text-xl mx-3 hover:text-primary ease-in-out duration-200 ${
+        :class="`text-xl mx-3 hover:text-primary ease-in-out duration-300 ${
           props.currentPath === link.path ? 'text-primary' : ''
         }`"
         v-for="link in NavBarList"
