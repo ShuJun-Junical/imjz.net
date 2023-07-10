@@ -1,10 +1,13 @@
 import { defineConfig } from "vitepress";
+import themeConfig from "./theme/config.ts";
 
 export default defineConfig({
+  extends: themeConfig,
   title: "纾浚的生活随笔",
   description: "记录生活点滴。",
   lang: "zh-CN",
   lastUpdated: true,
+  srcDir:'./src',
   outDir: "/dist",
   cleanUrls: true,
   ignoreDeadLinks: true,

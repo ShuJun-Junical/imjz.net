@@ -15,8 +15,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn
-          yarn build
+          npm
+          npm build
           
       - name: Install coscmd
         run: sudo pip install coscmd

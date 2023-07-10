@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <h1>Tags</h1>
+    <ul>
+      <li>
+        <router-link></router-link>
+      </li>
+    </ul>
+  </div>
+</template>
