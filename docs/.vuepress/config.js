@@ -20,7 +20,8 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     // logo: 'https://vuejs.press/images/hero.png',
-    sidebarDepth: 2, navbar: [// '/',
+    sidebarDepth: 2,
+    navbar: [// '/',
       {
         text: '随笔', link: '/article/',
       },
@@ -31,11 +32,11 @@ export default defineUserConfig({
         text: '标签', link: '/tag/',
       }
     ],
-
     lastUpdatedText: '最后更新', contributorsText: '贡献者',
   }),
 
   alias: {
+    // 覆盖默认主题的 Page.vue
     '@theme/VPPage.vue': path.resolve(
       __dirname,
       './components/Page.vue',

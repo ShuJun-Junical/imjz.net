@@ -4,7 +4,7 @@ import PageNav from '@theme/VPPageNav.vue'
 import SidebarItems from '@theme/VPSidebarItems.vue'
 import ArticleInfoList from "./ArticleInfoList.vue";
 import {usePageData} from "vuepress/client";
-import {useSidebarItems} from "@theme/useSidebarItems";
+import {useSidebarItems} from "@vuepress/theme-default/lib/client/composables/useSidebarItems.js";
 
 defineSlots<{
   'top'?: (props: Record<never, never>) => any
