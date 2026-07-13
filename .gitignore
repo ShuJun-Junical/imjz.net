@@ -1,13 +1,9 @@
-node_modules
-dist
-yarn-error.log
-qshell*
-cache
-.idea
-# VuePress 默认临时文件目录
-.temp
-# VuePress 默认缓存目录
-.cache
-# VuePress 默认构建生成的静态文件目录
-dist
+node_modules/
+.pnpm-store/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/.vitepress/.temp/
 .DS_Store
+.idea/
+*.log
+tmp/

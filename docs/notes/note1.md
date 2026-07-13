@@ -1,7 +1,7 @@
 ---
+title: Note 1
 date: 2020-12-01
+type: note
 ---
-
-# Note 1
 
 test test 123456.
