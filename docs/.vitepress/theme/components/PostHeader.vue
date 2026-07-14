@@ -17,3 +17,24 @@ const { frontmatter } = useData()
     <TagList :tags="frontmatter.tags" />
   </header>
 </template>
+
+<style scoped>
+.post-header {
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+}
+
+.post-header h1 {
+  margin: 0 0 16px;
+  font-family: var(--vp-font-family-base);
+  font-size: 34px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.35;
+}
+
+@media (max-width: 767px) {
+  .post-header h1 {
+    font-size: 28px;
+  }
+}
+</style>

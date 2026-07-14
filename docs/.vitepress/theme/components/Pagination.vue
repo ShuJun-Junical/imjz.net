@@ -26,3 +26,52 @@ const pages = computed(() => Array.from({ length: props.total }, (_, index) => i
     <span v-else />
   </nav>
 </template>
+
+<style scoped>
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 56px;
+  font-size: 14px;
+}
+
+.pagination > a:last-child {
+  justify-self: end;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination a {
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+}
+
+.pagination-pages a {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 3px;
+}
+
+.pagination a:hover,
+.pagination a[aria-current='page'] {
+  color: var(--vp-c-brand-1);
+}
+
+.pagination-pages a[aria-current='page'] {
+  background: var(--vp-c-brand-soft);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    gap: 10px;
+  }
+}
+</style>

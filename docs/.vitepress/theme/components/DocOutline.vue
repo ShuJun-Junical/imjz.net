@@ -138,3 +138,92 @@ function focusHeading(event) {
     </nav>
   </aside>
 </template>
+
+<style scoped>
+.doc-outline {
+  display: none;
+}
+
+.VPDocAsideOutline {
+  display: none;
+}
+
+.VPDocAsideOutline.has-outline {
+  display: block;
+}
+
+.VPDocAsideOutline .content {
+  position: relative;
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+}
+
+.outline-marker {
+  position: absolute;
+  top: 32px;
+  left: -1px;
+  z-index: 0;
+  width: 2px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: var(--vp-c-brand-1);
+  opacity: 0;
+  transition:
+    top 0.25s cubic-bezier(0, 1, 0.5, 1),
+    background-color 0.5s,
+    opacity 0.25s;
+}
+
+.outline-title {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 32px;
+}
+
+.VPDocOutlineItem.root {
+  position: relative;
+  z-index: 1;
+}
+
+.VPDocOutlineItem.nested {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.outline-link {
+  display: block;
+  overflow: hidden;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.5s;
+}
+
+.outline-link:hover,
+.outline-link.active {
+  color: var(--vp-c-text-1);
+  transition: color 0.25s;
+}
+
+@media (min-width: 1280px) {
+  .doc-outline {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 48px);
+    grid-area: 1 / 2;
+    display: block;
+    width: 224px;
+    max-height: calc(100vh - var(--vp-nav-height) - var(--vp-layout-top-height, 0px) - var(--vp-doc-top-height, 0px) - 80px);
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .doc-outline::-webkit-scrollbar {
+    display: none;
+  }
+}
+</style>

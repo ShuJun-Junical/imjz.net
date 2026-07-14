@@ -27,3 +27,31 @@ const formatDate = (date) => new Intl.DateTimeFormat('zh-CN', {
     </time>
   </div>
 </template>
+
+<style scoped>
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: center;
+  margin-top: 14px;
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+}
+
+.post-meta-item {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.post-meta svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+</style>

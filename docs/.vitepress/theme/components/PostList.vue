@@ -35,3 +35,58 @@ const totalPages = computed(() => pageCount(matchingPosts.value))
     <Pagination v-if="paginated" :current="page" :total="totalPages" />
   </div>
 </template>
+
+<style scoped>
+.post-preview {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.post-preview:last-of-type {
+  border-bottom: 0;
+}
+
+.post-preview h2 {
+  padding: 0;
+  margin: 0 0 12px;
+  border: 0;
+  font-family: var(--vp-font-family-base);
+  font-size: 27px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+}
+
+.post-preview h2 a {
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-preview h2 a:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.post-summary {
+  margin: 0 0 16px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.8;
+  text-indent: 0;
+}
+
+.empty-list {
+  color: var(--vp-c-text-3);
+  text-align: center;
+  text-indent: 0;
+}
+
+@media (max-width: 767px) {
+  .post-preview h2 {
+    font-size: 22px;
+  }
+}
+</style>

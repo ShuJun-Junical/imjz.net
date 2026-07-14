@@ -11,3 +11,42 @@
     </div>
   </footer>
 </template>
+
+<style scoped>
+.site-footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  padding: 16px 32px;
+  background: hsl(47, 7%, 9%);
+  color: hsla(47, 33%, 94%, 0.55);
+  font-size: 12px;
+}
+
+.site-footer-links,
+.site-footer-copy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: center;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--vp-c-white);
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+}
+</style>
