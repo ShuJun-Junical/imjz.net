@@ -99,6 +99,7 @@ nav.VPNavBarMenu .VPNavBarMenuLink {
 .page-title {
   margin: 0 0 48px;
   font-family: var(--vp-font-family-base);
+  font-weight: var(--font-weight-bold);
   font-size: 32px;
   line-height: 1.3;
 }
