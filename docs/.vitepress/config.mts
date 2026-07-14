@@ -7,6 +7,11 @@ export default defineConfig({
   description: '记录生活点滴。',
   cleanUrls: true,
   lastUpdated: true,
+  transformPageData(pageData) {
+    if (!Object.hasOwn(pageData.frontmatter, 'lastUpdated')) {
+      pageData.lastUpdated = undefined
+    }
+  },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'author', content: '纾浚' }],
@@ -22,6 +27,7 @@ export default defineConfig({
       level: [2, 3],
       label: '目录',
     },
+    aside: false,
     search: {
       provider: 'local',
       options: {
