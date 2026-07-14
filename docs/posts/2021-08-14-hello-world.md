@@ -3,6 +3,8 @@ title: 你好，世界
 date: 2021-08-14
 author: 青章浚
 location: 保定
+description: 新站第一篇博客，记录生活随笔站的开始。
+type: post
 ---
 
 新站第一篇博客~
