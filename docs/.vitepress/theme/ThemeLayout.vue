@@ -15,6 +15,8 @@ const { Layout } = DefaultTheme
     <template #doc-before>
       <PostHeader />
     </template>
+    <template #layout-bottom>
+      <SiteFooter />
+    </template>
   </Layout>
-  <SiteFooter />
 </template>
